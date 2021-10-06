@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": "Jan Gao",
+  "module": "./src/index.js",
   "exports": {
     ".": "./src/index.js",
     "./primitives": "./src/primitives/index.js"
@@ -25,11 +26,14 @@
     "react-primitives": "^0.8.1"
   },
   "scripts": {
-    "build": "rollup src/index.js -o dist/index.esm.js",
+    "build": "rollup -c",
     "lint": "eslint ."
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "@react-native-community/eslint-config": "^3.0.1",
+    "@rollup/plugin-babel": "^5.3.0",
     "eslint": "^7.32.0",
     "rollup": "^2.58.0"
   }
