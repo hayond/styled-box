@@ -1,0 +1,30 @@
+{
+  "name": "styled-box",
+  "version": "0.1.0",
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.1.0",
+    "@emotion/memoize": "^0.7.5",
+    "@styled-system/background": "^5.1.2",
+    "@styled-system/border": "^5.1.5",
+    "@styled-system/color": "^5.1.2",
+    "@styled-system/core": "^5.1.2",
+    "@styled-system/flexbox": "^5.1.2",
+    "@styled-system/layout": "^5.1.2",
+    "@styled-system/position": "^5.1.2",
+    "@styled-system/shadow": "^5.1.2",
+    "@styled-system/space": "^5.1.2",
+    "@styled-system/typography": "^5.1.2",
+    "css-to-react-native": "^3.0.0",
+    "react": "^17.0.2",
+    "react-primitives": "^0.8.1"
+  },
+  "scripts": {
+    "build": "rollup src/index.js -o dist/index.esm.js",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.0.1",
+    "eslint": "^7.32.0",
+    "rollup": "^2.58.0"
+  }
+}
