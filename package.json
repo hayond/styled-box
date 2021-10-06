@@ -1,6 +1,12 @@
 {
   "name": "styled-box",
   "version": "0.1.0",
+  "license": "MIT",
+  "author": "Jan Gao",
+  "exports": {
+    ".": "./src/index.js",
+    "./primitives": "./src/primitives/index.js"
+  },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.0",
     "@emotion/memoize": "^0.7.5",

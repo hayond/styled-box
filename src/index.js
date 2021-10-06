@@ -9,9 +9,9 @@ import { border } from '@styled-system/border';
 import { background } from '@styled-system/background';
 import { position } from '@styled-system/position';
 import { shadow } from '@styled-system/shadow';
-import { css, styled } from './primitives/index';
+import { css, styled, createShouldForwardProp } from './primitives/index';
 
-export { css, styled };
+export { css, styled, createShouldForwardProp };
 
 const viewStyleProps = [
   margin,
