@@ -1,8 +1,7 @@
 {
   "name": "styled-box",
   "version": "0.1.1",
-  "license": "MIT",
-  "author": "Jan Gao",
+  "description": "",
   "module": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
@@ -12,6 +11,16 @@
     "build": "babel src -d dist",
     "lint": "eslint ."
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayond/styled-box.git"
+  },
+  "author": "Jan Gao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hayond/styled-box/issues"
+  },
+  "homepage": "https://github.com/hayond/styled-box#readme",
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.0",
     "@emotion/memoize": "^0.7.5",
