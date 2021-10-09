@@ -1,12 +1,16 @@
 {
   "name": "styled-box",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "Jan Gao",
   "module": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./primitives": "./dist/primitives/index.js"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.0",
@@ -22,12 +26,10 @@
     "@styled-system/space": "^5.1.2",
     "@styled-system/typography": "^5.1.2",
     "css-to-react-native": "^3.0.0",
-    "react": "^17.0.2",
     "react-primitives": "^0.8.1"
   },
-  "scripts": {
-    "build": "babel src -d dist",
-    "lint": "eslint ."
+  "peerDependencies": {
+    "react": ">=16.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
