@@ -1,5 +1,5 @@
-import transform from 'css-to-react-native';
-import { interleave } from './utils';
+import transform from "css-to-react-native";
+import { interleave } from "./utils.js";
 
 // this is for handleInterpolation
 // they're reset on every call to css
@@ -7,56 +7,48 @@ import { interleave } from './utils';
 // handleInterpolation function on every css call
 let styles;
 let generated = {};
-let buffer = '';
+let buffer = "";
 let lastType;
 
 function handleInterpolation(interpolation, i, arr) {
   let type = typeof interpolation;
 
-  if (type === 'string') {
+  if (type === "string") {
     // strip comments
-    interpolation = interpolation.replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
+    interpolation = interpolation.replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, "");
   }
 
-  if (type === 'function') {
+  if (type === "function") {
     if (this === undefined) {
-      if (process.env.NODE_ENV !== 'production') {
+      if (process.env.NODE_ENV !== "production") {
         console.error(
-          'Interpolating functions in css calls is not allowed.\n' +
-            'If you want to have a css call based on props, create a function that returns a css call like this\n' +
-            'let dynamicStyle = (props) => css`color: ${props.color}`\n' +
-            'It can be called directly with props or interpolated in a styled call like this\n' +
-            'let SomeComponent = styled.View`${dynamicStyle}`'
+          "Interpolating functions in css calls is not allowed.\n" +
+            "If you want to have a css call based on props, create a function that returns a css call like this\n" +
+            "let dynamicStyle = (props) => css`color: ${props.color}`\n" +
+            "It can be called directly with props or interpolated in a styled call like this\n" +
+            "let SomeComponent = styled.View`${dynamicStyle}`"
         );
       }
     } else {
-      handleInterpolation.call(
-        this,
-        interpolation(
-          // $FlowFixMe
-          this
-        ),
-        i,
-        arr
-      );
+      handleInterpolation.call(this, interpolation(this), i, arr);
     }
     return;
   }
-  let isIrrelevant = interpolation == null || type === 'boolean';
+  let isIrrelevant = interpolation == null || type === "boolean";
   let isRnStyle =
-    (type === 'object' && !Array.isArray(interpolation)) || type === 'number';
-  if (lastType === 'string' && (isRnStyle || isIrrelevant)) {
+    (type === "object" && !Array.isArray(interpolation)) || type === "number";
+  if (lastType === "string" && (isRnStyle || isIrrelevant)) {
     let converted = convertStyles(buffer);
     if (converted !== undefined) {
       styles.push(converted);
     }
-    buffer = '';
+    buffer = "";
   }
   if (isIrrelevant) {
     return;
   }
 
-  if (type === 'string') {
+  if (type === "string") {
     buffer += interpolation;
 
     if (arr.length - 1 === i) {
@@ -64,7 +56,7 @@ function handleInterpolation(interpolation, i, arr) {
       if (converted !== undefined) {
         styles.push(converted);
       }
-      buffer = '';
+      buffer = "";
     }
   }
   if (isRnStyle) {
@@ -87,7 +79,7 @@ export function createCss(StyleSheet) {
     // this is done so we don't create a new
     // handleInterpolation function on every css call
     styles = [];
-    buffer = '';
+    buffer = "";
     lastType = undefined;
 
     if (args[0] == null || args[0].raw === undefined) {
@@ -120,7 +112,7 @@ function convertPropertyValue(style) {
   let match = propertyValuePattern.exec(style);
   // match[2] will be " " in cases where there is no value
   // but there is whitespace, e.g. "color: "
-  if (match !== null && match[2] !== ' ') {
+  if (match !== null && match[2] !== " ") {
     // the first value in the array will
     // be the whole string so we remove it
     match.shift();
@@ -130,13 +122,13 @@ function convertPropertyValue(style) {
 }
 
 function convertStyles(str) {
-  if (str.trim() === '') {
+  if (str.trim() === "") {
     return;
   }
 
   const stylePairs = [];
 
-  const parsedString = str.split(';');
+  const parsedString = str.split(";");
 
   parsedString.forEach(convertPropertyValue, stylePairs);
 
@@ -145,12 +137,12 @@ function convertStyles(str) {
   } catch (error) {
     const msg = error.message;
 
-    if (msg.includes('Failed to parse declaration')) {
+    if (msg.includes("Failed to parse declaration")) {
       const values = msg
-        .replace('Failed to parse declaration ', '')
-        .replace(/"/g, '')
+        .replace("Failed to parse declaration ", "")
+        .replace(/"/g, "")
         .trim()
-        .split(':');
+        .split(":");
 
       const errorMsg = `'${values[0]}' shorthand property requires units for example - ${values[0]}: 20px or ${values[0]}: 10px 20px 40px 50px`;
 

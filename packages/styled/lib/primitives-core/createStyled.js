@@ -1,6 +1,6 @@
-import React from 'react';
-import { createCss } from './createCss';
-import { getDisplayName } from './utils';
+import React from "react";
+import { createCss } from "./createCss.js";
+import { getDisplayName } from "./utils.js";
 
 export function createStyled(StyleSheet) {
   const css = createCss(StyleSheet);
@@ -9,7 +9,7 @@ export function createStyled(StyleSheet) {
     return function createStyledComponent(...styles) {
       const Styled = (props) => {
         let newProps = {};
-        if (shouldForwardProp && typeof getShouldForwardProp === 'function') {
+        if (shouldForwardProp && typeof getShouldForwardProp === "function") {
           for (let key in props) {
             if (shouldForwardProp(key)) {
               newProps[key] = props[key];

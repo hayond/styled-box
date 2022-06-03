@@ -1,17 +1,17 @@
 {
-  "name": "styled-box",
+  "name": "@styled-box/react-primitives",
+  "version": "1.0.0",
   "description": "",
+  "module": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hayond/styled-box.git"
   },
+  "keywords": [],
   "author": "Jan Gao",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hayond/styled-box/issues"
   },
-  "homepage": "https://github.com/hayond/styled-box#readme",
-  "workspaces": [
-    "packages/*"
-  ]
+  "homepage": "https://github.com/hayond/styled-box#readme"
 }
