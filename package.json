@@ -1,6 +1,7 @@
 {
   "name": "styled-box",
   "description": "",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hayond/styled-box.git"
