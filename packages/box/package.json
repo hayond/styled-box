@@ -1,6 +1,6 @@
 {
   "name": "@styled-box/box",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "module": "./lib/index.js",
   "repository": {
@@ -17,8 +17,8 @@
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.2",
     "@emotion/memoize": "^0.7.5",
-    "@styled-box/react-primitives": "^0.0.2",
-    "@styled-box/styled": "^0.0.2"
+    "@styled-box/react-primitives": "^0.0.3",
+    "@styled-box/styled": "^0.0.3"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
