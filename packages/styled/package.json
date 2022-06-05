@@ -1,6 +1,6 @@
 {
   "name": "@styled-box/styled",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "module": "./index.js",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/hayond/styled-box#readme",
   "dependencies": {
-    "@styled-box/react-primitives": "^1.0.0",
+    "@styled-box/react-primitives": "^0.0.2",
     "css-to-react-native": "^3.0.0",
     "@styled-system/background": "^5.1.2",
     "@styled-system/border": "^5.1.5",
