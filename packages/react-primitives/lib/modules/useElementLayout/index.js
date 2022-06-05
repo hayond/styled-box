@@ -46,8 +46,8 @@ function getResizeObserver() {
     }
   } else if (!didWarn) {
     if (
-      process.env.NODE_ENV !== "production" &&
-      process.env.NODE_ENV !== "test"
+      undefined !== "production" &&
+      undefined !== "test"
     ) {
       console.warn(
         "onLayout relies on ResizeObserver which is not supported by your browser. " +

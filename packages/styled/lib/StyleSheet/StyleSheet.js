@@ -24,7 +24,7 @@ const StyleSheet = {
   absoluteFill,
   absoluteFillObject,
   compose(style1, style2) {
-    if (process.env.NODE_ENV !== "production") {
+    if (undefined !== "production") {
       /* eslint-disable prefer-rest-params */
       const len = arguments.length;
       if (len > 2) {
@@ -47,7 +47,7 @@ const StyleSheet = {
   create(styles) {
     const result = {};
     Object.keys(styles).forEach((key) => {
-      if (process.env.NODE_ENV !== "production") {
+      if (undefined !== "production") {
         validate(key, styles);
       }
       const id = styles[key] && ReactNativePropRegistry.register(styles[key]);
