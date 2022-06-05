@@ -15,4 +15,4 @@ jobs:
       with:
         token: ${{ secrets.NPM_TOKEN }}
         access: public
-        package: ./packages/box/package.json
+        package: ./packages/box/package.json 
