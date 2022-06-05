@@ -10,7 +10,7 @@
 
 "use strict";
 
-const validateFormat = __DEV__
+const validateFormat = undefined
   ? function (format) {
       if (format === undefined) {
         throw new Error("invariant(...): Second argument must be a string.");

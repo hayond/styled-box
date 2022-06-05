@@ -32,7 +32,7 @@ function printWarning(format, ...args) {
   } catch (x) {}
 }
 
-var warning = __DEV__
+var warning = undefined
   ? function (condition, format, ...args) {
       if (format === undefined) {
         throw new Error(
