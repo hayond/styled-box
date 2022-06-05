@@ -9,7 +9,7 @@ import { background } from "@styled-system/background";
 import { position } from "@styled-system/position";
 import { shadow } from "@styled-system/shadow";
 import { createCss, createStyled } from "./lib/primitives-core/index.js";
-import StyleSheet from "@styled-box/react-primitives/lib/export/StyleSheet/StyleSheet.js";
+import StyleSheet from "./lib/StyleSheet/StyleSheet.js";
 
 const VIEW_STYLE_PROPS = [
   margin,
