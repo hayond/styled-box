@@ -1,8 +1,8 @@
 {
   "name": "@styled-box/box",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
-  "module": "./lib/index.js",
+  "module": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hayond/styled-box.git"
