@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <title>index</title>
+  </head>
+  <body>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react",
+          "css-to-react-native": "https://esm.sh/css-to-react-native",
+          "@styled-system/": "https://esm.sh/@styled-system/",
+          "@styled-box/styled": "./packages/styled/index.js"
+        }
+      }
+    </script>
+    <div id="root"></div>
+    <script type="module">
+      import React from "react";
+      import { createStyledView } from "@styled-box/styled";
+      import { createRoot } from "https://esm.sh/react-dom/client";
+      const Box = createStyledView("div");
+
+      const root = createRoot(document.querySelector("#root"));
+      root.render(React.createElement(Box, { children: "Hello World!" }));
+    </script>
+  </body>
+</html>

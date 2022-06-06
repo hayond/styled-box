@@ -212,7 +212,7 @@ function createDeclarationBlock(style) {
  */
 function createIdentifier(prefix, name, value) {
   const hashedString = hash(name + stringifyValueWithProperty(value, name));
-  return undefined !== "production"
+  return process.env.NODE_ENV === "development"
     ? `${prefix}-${name}-${hashedString}`
     : `${prefix}-${hashedString}`;
 }

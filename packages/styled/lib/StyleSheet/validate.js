@@ -7,7 +7,7 @@
  *       strict-local
  */
 
-import warning from "../fbjs/lib/warning";
+import warning from "../fbjs/lib/warning.js";
 
 const invalidShortforms = {
   background: true,

@@ -20,7 +20,7 @@ function handleInterpolation(interpolation, i, arr) {
 
   if (type === "function") {
     if (this === undefined) {
-      if (undefined !== "production") {
+      if (process.env.NODE_ENV === "development") {
         console.error(
           "Interpolating functions in css calls is not allowed.\n" +
             "If you want to have a css call based on props, create a function that returns a css call like this\n" +

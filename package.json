@@ -1,7 +1,9 @@
 {
   "name": "styled-box",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "serve": "serve"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hayond/styled-box.git"
@@ -14,5 +16,8 @@
   "homepage": "https://github.com/hayond/styled-box#readme",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "serve": "^13.0.2"
+  }
 }

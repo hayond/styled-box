@@ -7,9 +7,9 @@
  *
  */
 
-import ReactNativePropRegistry from "./ReactNativePropRegistry";
-import flattenStyle from "./flattenStyle";
-import validate from "./validate";
+import ReactNativePropRegistry from "./ReactNativePropRegistry.js";
+import flattenStyle from "./flattenStyle.js";
+import validate from "./validate.js";
 
 const absoluteFillObject = {
   position: "absolute",
@@ -24,7 +24,7 @@ const StyleSheet = {
   absoluteFill,
   absoluteFillObject,
   compose(style1, style2) {
-    if (undefined !== "production") {
+    if (process.env.NODE_ENV === "development") {
       /* eslint-disable prefer-rest-params */
       const len = arguments.length;
       if (len > 2) {
@@ -47,7 +47,7 @@ const StyleSheet = {
   create(styles) {
     const result = {};
     Object.keys(styles).forEach((key) => {
-      if (undefined !== "production") {
+      if (process.env.NODE_ENV === "development") {
         validate(key, styles);
       }
       const id = styles[key] && ReactNativePropRegistry.register(styles[key]);

@@ -60,7 +60,7 @@ const View = React.forwardRef((props, forwardedRef) => {
     onStartShouldSetResponderCapture,
   } = props;
 
-  if (undefined !== "production") {
+  if (process.env.NODE_ENV === "development") {
     React.Children.toArray(props.children).forEach((item) => {
       if (typeof item === "string") {
         console.error(

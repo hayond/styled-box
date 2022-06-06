@@ -15,7 +15,7 @@ import { isStartish, isMoveish, isEndish } from "./ResponderEventTypes";
  * when touches end and start again.
  */
 
-const __DEV__ = undefined !== "production";
+const __DEV__ = process.env.NODE_ENV === "development";
 const MAX_TOUCH_BANK = 20;
 const touchBank = [];
 const touchHistory = {

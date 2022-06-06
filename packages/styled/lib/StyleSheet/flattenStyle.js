@@ -8,8 +8,8 @@
  *
  */
 
-import ReactNativePropRegistry from "./ReactNativePropRegistry";
-import invariant from "../fbjs/lib/invariant";
+import ReactNativePropRegistry from "./ReactNativePropRegistry.js";
+import invariant from "../fbjs/lib/invariant.js";
 
 function getStyle(style) {
   if (typeof style === "number") {
@@ -23,7 +23,7 @@ function flattenStyle(style) {
     return undefined;
   }
 
-  if (undefined !== "production") {
+  if (process.env.NODE_ENV === "development") {
     invariant(style !== true, "style may be false but not true");
   }
 

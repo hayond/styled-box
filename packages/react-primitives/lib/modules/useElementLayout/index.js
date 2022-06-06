@@ -45,10 +45,7 @@ function getResizeObserver() {
       });
     }
   } else if (!didWarn) {
-    if (
-      undefined !== "production" &&
-      undefined !== "test"
-    ) {
+    if (process.env.NODE_ENV === "development") {
       console.warn(
         "onLayout relies on ResizeObserver which is not supported by your browser. " +
           "Please include a polyfill, e.g., https://github.com/que-etc/resize-observer-polyfill."
