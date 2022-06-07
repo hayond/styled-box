@@ -8,7 +8,7 @@ import { border } from "@styled-system/border";
 import { background } from "@styled-system/background";
 import { position } from "@styled-system/position";
 import { shadow } from "@styled-system/shadow";
-import emotionIsPropValid from "@emotion/is-prop-valid";
+import isPropValid from "@emotion/is-prop-valid";
 import RNWStyleSheet from "./lib/StyleSheet/StyleSheet.js";
 import { createCss, createStyled } from "./lib/primitives-core/index.js";
 
@@ -35,7 +35,6 @@ export const styledSystem = {
   shadow,
   background,
 };
-export const isPropValid = emotionIsPropValid;
 export const StyleSheet = RNWStyleSheet;
 
 export const css = createCss(StyleSheet);
@@ -44,7 +43,7 @@ export const styled = createStyled(StyleSheet);
 export function createStyledView(
   View,
   StyleSheet = RNWStyleSheet,
-  shouldForwardProp = emotionIsPropValid,
+  shouldForwardProp = isPropValid,
   noFlatten = false
 ) {
   return createStyled(StyleSheet)(View, { shouldForwardProp, noFlatten })(
@@ -55,7 +54,7 @@ export function createStyledView(
 export function createStyledViewText(
   Text,
   StyleSheet = RNWStyleSheet,
-  shouldForwardProp = emotionIsPropValid,
+  shouldForwardProp = isPropValid,
   noFlatten = false
 ) {
   return createStyled(StyleSheet)(Text, { shouldForwardProp, noFlatten })(
@@ -66,7 +65,7 @@ export function createStyledViewText(
 export function createStyledViewImage(
   Image,
   StyleSheet = RNWStyleSheet,
-  shouldForwardProp = emotionIsPropValid,
+  shouldForwardProp = isPropValid,
   noFlatten = false
 ) {
   return createStyled(StyleSheet)(Image, { shouldForwardProp, noFlatten })(
@@ -77,7 +76,7 @@ export function createStyledViewImage(
 export function createStyledBox(
   Box,
   StyleSheet = RNWStyleSheet,
-  shouldForwardProp = emotionIsPropValid,
+  shouldForwardProp = isPropValid,
   noFlatten = false
 ) {
   return createStyled(StyleSheet)(Box, { shouldForwardProp, noFlatten })(

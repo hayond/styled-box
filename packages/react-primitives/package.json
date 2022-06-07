@@ -1,10 +1,10 @@
 {
   "name": "@styled-box/react-primitives",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "module": "./index.js",
   "scripts": {
-    "bundle": "deno run --allow-read --allow-env --allow-run esbuild.js"
+    "bundle": "deno run --allow-read --allow-env --allow-run scripts/esbuild.js"
   },
   "repository": {
     "type": "git",
