@@ -27,13 +27,22 @@
     <script type="module">
       import React from "react";
       import { createRoot } from "react-dom/client";
-      // import { createStyledTextView } from "@styled-box/styled";
+      import { createStyledTextView } from "@styled-box/styled";
       import { View, Text, Image } from "@styled-box/box";
 
       // const Div = createStyledTextView("div");
+      // const App = (props) => React.createElement(Div, { marginTop: 30, fontSize: 40, children: "Hello World!" });
+      const App = (props) =>
+        React.createElement(View, {
+          marginTop: 30,
+          children: React.createElement(Text, {
+            fontSize: 40,
+            children: "Hello World!",
+          }),
+        });
 
       const root = createRoot(document.querySelector("#root"));
-      root.render(React.createElement(Text, { children: "Hello World!", marginTop: 30, fontSize: 40 }));
+      root.render(React.createElement(App));
     </script>
   </body>
 </html>

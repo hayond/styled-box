@@ -17,7 +17,7 @@
   "dependencies": {
     "@emotion/memoize": "^0.7.5",
     "@styled-box/react-primitives": "^0.0.8",
-    "@styled-box/styled": "^0.0.7"
+    "@styled-box/styled": "^0.0.8"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
