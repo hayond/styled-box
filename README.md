@@ -31,7 +31,7 @@ const App = (props) =>
 #### result
 
 ```html
-<div font-size="40" style="margin-top: 30px; font-size: 40px;">
+<div style="margin-top: 30px; font-size: 40px;">
   Hello World!
 </div>
 ```
