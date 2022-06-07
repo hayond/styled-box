@@ -24,7 +24,7 @@ const emptyObject = {};
 let idCounter = 0;
 
 function useStable(getInitialValue) {
-  const ref = (React.useRef < T) | (null > null);
+  const ref = React.useRef(null);
   if (ref.current == null) {
     ref.current = getInitialValue();
   }
