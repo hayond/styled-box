@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "description": "",
   "module": "./index.js",
+  "exports": {
+    "./extended.js": "./extended.js"
+  },
   "scripts": {
-    "bundle": "deno run --allow-read --allow-env --allow-run esbuild.js"
+    "bundle": "deno run --allow-read --allow-env --allow-run scripts/esbuild.js"
   },
   "repository": {
     "type": "git",
