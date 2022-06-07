@@ -1,6 +1,6 @@
 # styled-box
 
-The ture css in js, make css as props. lightweight and easy use.
+The true css in js, make css as props. lightweight and easy use.
 
 ## Packages
 
