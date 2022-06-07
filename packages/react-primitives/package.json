@@ -1,8 +1,11 @@
 {
   "name": "@styled-box/react-primitives",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "",
   "module": "./index.js",
+  "scripts": {
+    "bundle": "deno run --allow-read --allow-env --allow-run esbuild.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hayond/styled-box.git"

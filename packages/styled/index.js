@@ -52,7 +52,7 @@ export function createStyledView(
   );
 }
 
-export function createStyledTextView(
+export function createStyledViewText(
   Text,
   StyleSheet = RNWStyleSheet,
   shouldForwardProp = emotionIsPropValid,
@@ -63,7 +63,7 @@ export function createStyledTextView(
   );
 }
 
-export function createStyledImage(
+export function createStyledViewImage(
   Image,
   StyleSheet = RNWStyleSheet,
   shouldForwardProp = emotionIsPropValid,
@@ -71,5 +71,16 @@ export function createStyledImage(
 ) {
   return createStyled(StyleSheet)(Image, { shouldForwardProp, noFlatten })(
     compose(...VIEW_STYLE_PROPS, background)
+  );
+}
+
+export function createStyledBox(
+  Box,
+  StyleSheet = RNWStyleSheet,
+  shouldForwardProp = emotionIsPropValid,
+  noFlatten = false
+) {
+  return createStyled(StyleSheet)(Box, { shouldForwardProp, noFlatten })(
+    compose(...VIEW_STYLE_PROPS, typography, shadow, background)
   );
 }
