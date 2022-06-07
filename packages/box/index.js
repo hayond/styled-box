@@ -11,7 +11,7 @@ import {
   createStyledTextView,
   createStyledImage,
 } from "@styled-box/styled";
-import { primitiveShouldForwardProp } from "./lib/shouldForwardProp";
+import { primitiveShouldForwardProp } from "./lib/shouldForwardProp.js";
 
 export const StyleSheet = ReactPrimitivesStyleSheet;
 export const View = createStyledView(
