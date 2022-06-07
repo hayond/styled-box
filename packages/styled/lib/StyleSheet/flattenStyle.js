@@ -9,7 +9,6 @@
  */
 
 import ReactNativePropRegistry from "./ReactNativePropRegistry.js";
-import invariant from "../fbjs/lib/invariant.js";
 
 function getStyle(style) {
   if (typeof style === "number") {
@@ -21,10 +20,6 @@ function getStyle(style) {
 function flattenStyle(style) {
   if (!style) {
     return undefined;
-  }
-
-  if (process.env.NODE_ENV === "development") {
-    invariant(style !== true, "style may be false but not true");
   }
 
   if (!Array.isArray(style)) {

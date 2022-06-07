@@ -1,6 +1,6 @@
 {
   "name": "@styled-box/styled",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "module": "./index.js",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/hayond/styled-box#readme",
   "dependencies": {
-    "css-to-react-native": "^3.0.0",
+    "@emotion/is-prop-valid": "^1.1.2",
     "@styled-system/background": "^5.1.2",
     "@styled-system/border": "^5.1.5",
     "@styled-system/color": "^5.1.2",
@@ -25,6 +25,7 @@
     "@styled-system/position": "^5.1.2",
     "@styled-system/shadow": "^5.1.2",
     "@styled-system/space": "^5.1.2",
-    "@styled-system/typography": "^5.1.2"
+    "@styled-system/typography": "^5.1.2",
+    "css-to-react-native": "^3.0.0"
   }
 }

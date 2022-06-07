@@ -1,5 +1,5 @@
 import memoize from "@emotion/memoize";
-import isPropValid from "@emotion/is-prop-valid";
+import { isPropValid } from "@styled-box/styled";
 
 const forwardableProps = {
   // primitive props
@@ -49,11 +49,14 @@ const forwardableProps = {
   textBreakStrategy: true,
 };
 
-export const primitiveShouldForwardProp = createShouldForwardProp(
-  Object.keys(forwardableProps)
-);
-
-export const createShouldForwardProp = (props) => {
+export const createShouldForwardProp = (props, shouldForwardProp) => {
   const regex = new RegExp(`^(${props.join("|")})$`);
-  return memoize((prop) => isPropValid(prop) && !regex.test(prop));
+  return memoize(
+    (prop) => regex.test(prop) || (shouldForwardProp && shouldForwardProp(prop))
+  );
 };
+
+export const primitiveShouldForwardProp = createShouldForwardProp(
+  Object.keys(forwardableProps),
+  isPropValid
+);

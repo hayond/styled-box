@@ -13,21 +13,27 @@
       {
         "imports": {
           "react": "https://esm.sh/react",
+          "react-dom/client": "https://esm.sh/react-dom/client",
           "css-to-react-native": "https://esm.sh/css-to-react-native",
+          "@emotion/": "https://esm.sh/@emotion/",
           "@styled-system/": "https://esm.sh/@styled-system/",
-          "@styled-box/styled": "./packages/styled/index.js"
+          "@styled-box/react-primitives": "https://esm.sh/@styled-box/react-primitives",
+          "@styled-box/styled": "./packages/styled/index.js",
+          "@styled-box/box": "./packages/box/index.js"
         }
       }
     </script>
     <div id="root"></div>
     <script type="module">
       import React from "react";
-      import { createStyledView } from "@styled-box/styled";
-      import { createRoot } from "https://esm.sh/react-dom/client";
-      const Box = createStyledView("div");
+      import { createRoot } from "react-dom/client";
+      import { createStyledTextView } from "@styled-box/styled";
+      // import { View, Text, Image } from "@styled-box/box";
+
+      const Div = createStyledTextView("div");
 
       const root = createRoot(document.querySelector("#root"));
-      root.render(React.createElement(Box, { children: "Hello World!" }));
+      root.render(React.createElement(Div, { children: "Hello World!", marginTop: 30, fontSize: 40 }));
     </script>
   </body>
 </html>

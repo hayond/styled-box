@@ -1,9 +1,10 @@
 import React from "react";
 
 import {
-  View as ReactView,
-  Text as ReactText,
-  Image as ReactImage,
+  StyleSheet as ReactPrimitivesStyleSheet,
+  View as ReactPrimitivesView,
+  Text as ReactPrimitivesText,
+  Image as ReactPrimitivesImage,
 } from "@styled-box/react-primitives";
 import {
   createStyledView,
@@ -12,9 +13,25 @@ import {
 } from "@styled-box/styled";
 import { primitiveShouldForwardProp } from "./lib/shouldForwardProp";
 
-export const View = createStyledView(ReactView, primitiveShouldForwardProp);
-export const Text = createStyledTextView(ReactText, primitiveShouldForwardProp);
-export const Image = createStyledImage(ReactImage, primitiveShouldForwardProp);
+export const StyleSheet = ReactPrimitivesStyleSheet;
+export const View = createStyledView(
+  ReactPrimitivesView,
+  ReactPrimitivesStyleSheet,
+  primitiveShouldForwardProp,
+  true
+);
+export const Text = createStyledTextView(
+  ReactPrimitivesText,
+  ReactPrimitivesStyleSheet,
+  primitiveShouldForwardProp,
+  true
+);
+export const Image = createStyledImage(
+  ReactPrimitivesImage,
+  ReactPrimitivesStyleSheet,
+  primitiveShouldForwardProp,
+  true
+);
 
 export default function Box(props) {
   return props.source

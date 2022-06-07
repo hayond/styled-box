@@ -1,6 +1,6 @@
 {
   "name": "@styled-box/box",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "module": "./index.js",
   "repository": {
@@ -15,10 +15,9 @@
   },
   "homepage": "https://github.com/hayond/styled-box#readme",
   "dependencies": {
-    "@emotion/is-prop-valid": "^1.1.2",
     "@emotion/memoize": "^0.7.5",
-    "@styled-box/react-primitives": "^0.0.6",
-    "@styled-box/styled": "^0.0.6"
+    "@styled-box/react-primitives": "^0.0.7",
+    "@styled-box/styled": "^0.0.7"
   },
   "peerDependencies": {
     "react": ">=17.0.0"

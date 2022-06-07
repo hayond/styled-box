@@ -18,9 +18,6 @@ const createKey = (id) => `${prefix}-${id}`;
 export default class ReactNativePropRegistry {
   static register(object) {
     const id = uniqueID++;
-    if (process.env.NODE_ENV === "development") {
-      Object.freeze(object);
-    }
     const key = createKey(id);
     objects[key] = object;
     return id;

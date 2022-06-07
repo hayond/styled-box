@@ -8,8 +8,9 @@ import { border } from "@styled-system/border";
 import { background } from "@styled-system/background";
 import { position } from "@styled-system/position";
 import { shadow } from "@styled-system/shadow";
+import emotionIsPropValid from "@emotion/is-prop-valid";
+import RNWStyleSheet from "./lib/StyleSheet/StyleSheet.js";
 import { createCss, createStyled } from "./lib/primitives-core/index.js";
-import StyleSheet from "./lib/StyleSheet/StyleSheet.js";
 
 const VIEW_STYLE_PROPS = [
   margin,
@@ -21,21 +22,54 @@ const VIEW_STYLE_PROPS = [
   position,
 ];
 
+export const styledSystem = {
+  compose,
+  margin,
+  padding,
+  color,
+  layout,
+  flexbox,
+  border,
+  position,
+  typography,
+  shadow,
+  background,
+};
+export const isPropValid = emotionIsPropValid;
+export const StyleSheet = RNWStyleSheet;
+
 export const css = createCss(StyleSheet);
 export const styled = createStyled(StyleSheet);
 
-export function createStyledView(View, shouldForwardProp) {
-  return styled(View, { shouldForwardProp })(compose(...VIEW_STYLE_PROPS));
-}
-
-export function createStyledTextView(Text, shouldForwardProp) {
-  return styled(Text, { shouldForwardProp })(
-    compose([...VIEW_STYLE_PROPS, typography, shadow])
+export function createStyledView(
+  View,
+  StyleSheet = RNWStyleSheet,
+  shouldForwardProp = emotionIsPropValid,
+  noFlatten = false
+) {
+  return createStyled(StyleSheet)(View, { shouldForwardProp, noFlatten })(
+    compose(...VIEW_STYLE_PROPS)
   );
 }
 
-export function createStyledImage(Image, shouldForwardProp) {
-  return styled(Image, { shouldForwardProp })(
-    compose([...VIEW_STYLE_PROPS, background])
+export function createStyledTextView(
+  Text,
+  StyleSheet = RNWStyleSheet,
+  shouldForwardProp = emotionIsPropValid,
+  noFlatten = false
+) {
+  return createStyled(StyleSheet)(Text, { shouldForwardProp, noFlatten })(
+    compose(...VIEW_STYLE_PROPS, typography, shadow)
+  );
+}
+
+export function createStyledImage(
+  Image,
+  StyleSheet = RNWStyleSheet,
+  shouldForwardProp = emotionIsPropValid,
+  noFlatten = false
+) {
+  return createStyled(StyleSheet)(Image, { shouldForwardProp, noFlatten })(
+    compose(...VIEW_STYLE_PROPS, background)
   );
 }
