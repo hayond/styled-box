@@ -4,9 +4,9 @@ The ture css in js, make css as props. lightweight and easy use.
 
 ## Packages
 
-- `@styled-box/styled` the core module, highly inspired by [emotion](https://github.com/emotion-js/emotion) and [styled-system](https://github.com/styled-system/styled-system).
-- `@styled-box/react-primitives` a copy from [react-native-web](https://github.com/necolas/react-native-web), get the base components `StyleSheet`, `View`, `Text`, `Image`
-- `@styled-box/box` combine `styled`, `react-primitives`, a generic component named `Box` to support most styles through props.
+- **@styled-box/styled** the core module, highly inspired by [emotion](https://github.com/emotion-js/emotion) and [styled-system](https://github.com/styled-system/styled-system).
+- **@styled-box/react-primitives** a copy from [react-native-web](https://github.com/necolas/react-native-web), get the base components `StyleSheet`, `View`, `Text`, `Image`
+- **@styled-box/box** combine `styled`, `react-primitives`, a generic component named `Box` to support most styles through props.
 
 ## Examples
 
