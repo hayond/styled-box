@@ -4,6 +4,7 @@
   "description": "",
   "module": "./index.js",
   "exports": {
+    ".": "./index.js",
     "./shouldForwardProp.js": "./shouldForwardProp.js"
   },
   "repository": {
