@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "module": "./index.js",
+  "exports": {
+    "./shouldForwardProp.js": "./shouldForwardProp.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hayond/styled-box.git"
@@ -16,6 +19,7 @@
   "homepage": "https://github.com/hayond/styled-box#readme",
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.2",
+    "@emotion/memoize": "^0.7.5",
     "@styled-system/background": "^5.1.2",
     "@styled-system/border": "^5.1.5",
     "@styled-system/color": "^5.1.2",

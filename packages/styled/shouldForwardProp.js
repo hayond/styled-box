@@ -1,5 +1,5 @@
 import memoize from "@emotion/memoize";
-import { isPropValid } from "@styled-box/styled";
+import isPropValid from "@emotion/is-prop-valid";
 
 const forwardableProps = {
   // primitive props

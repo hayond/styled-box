@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "",
   "module": "./index.js",
-  "exports": {
-    "./extended.js": "./extended.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hayond/styled-box.git"
@@ -18,7 +15,6 @@
   },
   "homepage": "https://github.com/hayond/styled-box#readme",
   "dependencies": {
-    "@emotion/memoize": "^0.7.5",
     "@styled-box/react-primitives": "^0.1.0",
     "@styled-box/styled": "^0.1.0"
   },
