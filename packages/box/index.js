@@ -8,8 +8,8 @@ import {
 } from "@styled-box/react-primitives";
 import {
   createStyledView,
-  createStyledTextView,
-  createStyledImage,
+  createStyledViewText,
+  createStyledViewImage,
 } from "@styled-box/styled";
 import { primitiveShouldForwardProp } from "./lib/shouldForwardProp.js";
 
@@ -20,13 +20,13 @@ export const View = createStyledView(
   primitiveShouldForwardProp,
   true
 );
-export const Text = createStyledTextView(
+export const Text = createStyledViewText(
   ReactPrimitivesText,
   ReactPrimitivesStyleSheet,
   primitiveShouldForwardProp,
   true
 );
-export const Image = createStyledImage(
+export const Image = createStyledViewImage(
   ReactPrimitivesImage,
   ReactPrimitivesStyleSheet,
   primitiveShouldForwardProp,
