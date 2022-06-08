@@ -20,12 +20,7 @@ the total code can check this [index.html](https://github.com/hayond/styled-box/
 import { createStyledBox } from "https://esm.sh/@styled-box/styled";
 
 const Div = createStyledBox("div");
-const App = (props) =>
-  React.createElement(Div, {
-    marginTop: 30,
-    fontSize: 40,
-    children: "Hello World!",
-  });
+const App = (props) => <Div marginTop={30} fontSize={40}>{"Hello World!"}</Div>;
 ```
 
 #### result
@@ -43,14 +38,10 @@ const App = (props) =>
 ```javascript
 import Box, { View, Text, Image } from "https://esm.sh/@styled-box/box";
 
-const App = (props) =>
-  React.createElement(Box, {
-    marginTop: 30,
-    children: React.createElement(Box, {
-      fontSize: 40,
-      children: "Hello World!",
-    }),
-  });
+const App = (props) => 
+  <Box marginTop={30}>
+    <Box fontSize={40}>"Hello World!"</Box>;
+  </Box>;
 ```
 
 #### result
